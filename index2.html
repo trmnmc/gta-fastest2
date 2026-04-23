@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>GTA Online: Fastest by Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light only;--bg:#f2efe8;--ink:#0f0f0f;--paper:#faf7f0;--accent:#e8472c;--gold:#c9a24a;--muted:#6b6b6b;--border:#1a1a1a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#f2efe8 !important;color:#0f0f0f !important;font-family:'Inter',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{padding:24px 16px 80px;max-width:860px;margin:0 auto;background:#f2efe8 !important}
+.masthead{border-top:3px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:14px 0 10px;margin-bottom:18px}
+.masthead-top{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#6b6b6b;margin-bottom:10px}
+.mast-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,11vw,72px);line-height:0.92;letter-spacing:0.005em;color:#0f0f0f}
+.mast-title .accent{color:#e8472c}
+.mast-sub{font-family:'Inter',sans-serif;font-size:13px;color:#6b6b6b;margin-top:8px;font-weight:500;max-width:600px}
+.dek{border-left:3px solid #e8472c;padding:10px 14px;background:#faf7f0;margin-bottom:26px;font-size:13px;line-height:1.6}
+.dek strong{font-weight:700}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#e8472c;margin:32px 0 4px}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.02em;border-bottom:1px solid #1a1a1a;padding-bottom:8px;margin-bottom:16px}
+.card{background:#faf7f0;border:1px solid #1a1a1a;margin-bottom:14px;overflow:hidden}
+.card-head{display:flex;justify-content:space-between;align-items:baseline;padding:10px 14px 6px;border-bottom:1px dashed rgba(0,0,0,0.15);gap:8px;flex-wrap:wrap}
+.class-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.03em}
+.class-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:#6b6b6b;padding:2px 6px;border:1px solid #6b6b6b;border-radius:2px}
+.card-body{display:grid;grid-template-columns:1fr}
+@media (min-width:520px){.card-body{grid-template-columns:1fr 1fr}.winner.lap{border-left:1px solid rgba(0,0,0,0.12)}}
+.winner{padding:12px 14px 14px}
+.winner-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#e8472c;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.winner-label::before{content:'';display:inline-block;width:6px;height:6px;background:#e8472c;border-radius:50%}
+.winner-label.lap{color:#c9a24a}
+.winner-label.lap::before{background:#c9a24a}
+.car-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.02em;line-height:1.1;margin-bottom:4px}
+.car-stat{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:#0f0f0f}
+.car-stat .unit{color:#6b6b6b;font-weight:400;font-size:11px;margin-left:2px}
+.card.same .card-body{grid-template-columns:1fr}
+.card.same .winner.lap{border-left:none;border-top:1px dashed rgba(0,0,0,0.15)}
+.same-badge{background:#e8472c;color:#faf7f0;font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 6px;letter-spacing:0.1em}
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid #1a1a1a;font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b6b6b;line-height:1.7;letter-spacing:0.04em}
+.footer .line{display:flex;justify-content:space-between;margin-bottom:4px;gap:10px}
+.legend{display:flex;gap:14px;margin:8px 0 12px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:10px;color:#6b6b6b}
+.legend-item{display:flex;align-items:center;gap:5px}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot.top{background:#e8472c}
+.dot.lap{background:#c9a24a}
+</style>
+</head>
+<body>
+<header class="masthead">
+<div class="masthead-top"><span>Vol. 1 &middot; Issue 01</span><span>April 2026</span></div>
+<h1 class="mast-title">Fastest<br>by <span class="accent">Class</span></h1>
+<p class="mast-sub">A visual reference to GTA Online's reigning champions &mdash; straight-line top speed and lap-time kings, one class at a time.</p>
+</header>
+<div class="dek"><strong>What you're looking at:</strong> every standard race class in GTA Online, with the fastest car by tested top speed (red) and by lap time on Broughy1322's Cutting Coroners GP (gold). When the same car wins both, it gets a single featured card.</div>
+<div class="legend"><div class="legend-item"><span class="dot top"></span> Top Speed</div><div class="legend-item"><span class="dot lap"></span> Lap Time</div></div>
+
+<div class="section-label">Performance Tier</div>
+<h2 class="section-title">Super &middot; Sports &middot; Classics</h2>
+
+<div class="card"><div class="card-head"><span class="class-name">Super</span><span class="class-tag">2025 shakeup</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Progen Luiva</div><div class="car-stat">136.25<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Vapid FMJ MK V</div><div class="car-stat">~0:54<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card same"><div class="card-head"><span class="class-name">Sports</span><span class="same-badge">Double Crown</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Bravado Banshee GTS</div><div class="car-stat">138.00<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Bravado Banshee GTS</div><div class="car-stat">1:00.621<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card"><div class="card-head"><span class="class-name">Sports Classics</span><span class="class-tag">Rockets allowed</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Pegassi Toreador</div><div class="car-stat">135.25<span class="unit">mph (boost)</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Lampadati Turismo Classic</div><div class="car-stat">1:04.6<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="section-label">Street Tier</div>
+<h2 class="section-title">Coupes &middot; Sedans &middot; Compacts</h2>
+
+<div class="card same"><div class="card-head"><span class="class-name">Coupes</span><span class="same-badge">Double Crown</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Fathom FR36</div><div class="car-stat">121.50<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Fathom FR36</div><div class="car-stat">1:04.214<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card"><div class="card-head"><span class="class-name">Sedans</span><span class="class-tag">Verified</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Schafter V12 (Armored)</div><div class="car-stat">123.50<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">&Uuml;bermacht Rhinehart</div><div class="car-stat">1:04.748<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card"><div class="card-head"><span class="class-name">Compacts</span><span class="class-tag">Pure class</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">BF Club</div><div class="car-stat">112.50<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">BF Club</div><div class="car-stat">1:06.968<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="section-label">Brute Force Tier</div>
+<h2 class="section-title">Muscle &middot; SUVs &middot; Off-Road</h2>
+
+<div class="card"><div class="card-head"><span class="class-name">Muscle</span><span class="class-tag">Split champs</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">BF Weevil Custom</div><div class="car-stat">137.50<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Bravado Buffalo STX</div><div class="car-stat">1:03.463<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card same"><div class="card-head"><span class="class-name">SUVs</span><span class="same-badge">Double Crown</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Pegassi Toros</div><div class="car-stat">127.50<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Pegassi Toros</div><div class="car-stat">1:05.233<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card"><div class="card-head"><span class="class-name">Off-Road</span><span class="class-tag">~10 mph spread</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Maxwell Vagrant</div><div class="car-stat">122.30<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Declasse Draugur</div><div class="car-stat">1:03.262<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="section-label">Utility &amp; Specialty Tier</div>
+<h2 class="section-title">Vans &middot; Motorcycles &middot; Open Wheel</h2>
+
+<div class="card"><div class="card-head"><span class="class-name">Vans</span><span class="class-tag">Niche class</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Declasse Gang Burrito</div><div class="car-stat">105.25<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Bravado Rumpo Custom</div><div class="car-stat">1:17.4<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card"><div class="card-head"><span class="class-name">Motorcycles</span><span class="class-tag">Wheelie glitch</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Western Reever</div><div class="car-stat">163.00<span class="unit">mph (wheelie)</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Western Powersurge</div><div class="car-stat">~0:55.371<span class="unit">sec</span></div></div>
+</div></div>
+
+<div class="card"><div class="card-head"><span class="class-name">Open Wheel</span><span class="class-tag">F1</span></div><div class="card-body">
+<div class="winner top"><div class="winner-label">Top Speed</div><div class="car-name">Declasse DR1</div><div class="car-stat">124.00<span class="unit">mph</span></div></div>
+<div class="winner lap"><div class="winner-label lap">Lap Time</div><div class="car-name">Benefactor BR8</div><div class="car-stat">0:54.788<span class="unit">sec</span></div></div>
+</div></div>
+
+<footer class="footer">
+<div class="line"><span>SOURCES</span><span>Broughy1322 &middot; gtabase.com</span></div>
+<div class="line"><span>METHODOLOGY</span><span>Cutting Coroners GP &middot; non-HSW</span></div>
+<div class="line"><span>COMPILED</span><span>April 2026</span></div>
+</footer>
+</body>
+</html>
